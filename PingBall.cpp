@@ -204,12 +204,12 @@ void PingBall::DestroyGame()
 	window.close();
 }
 
-int PingBall::GetMinPlayers()
+size_t PingBall::GetMinPlayers()
 {
 	return 2;
 }
 
-int PingBall::GetMaxPlayers()
+size_t PingBall::GetMaxPlayers()
 {
 	return 6;
 }
@@ -231,6 +231,8 @@ void PingBall::InitPlayers()
 	{
 		newPlayer = new Player();
 		newPlayer->Wplayer = wPlayers[i];
+		newPlayer->Wplayer->SetController(AWPlayer::ControllerLocation::LEFT, AWPlayer::ControllerType::JOYSTICK);
+		newPlayer->Wplayer->SetController(AWPlayer::ControllerLocation::RIGHT, AWPlayer::ControllerType::SIMPLEBUTTON);
 		newPlayer->id = i;
 		newPlayer->position.x = initialPosition[i].x;
 		newPlayer->position.y = initialPosition[i].y;

@@ -72,8 +72,8 @@ public:
 	void Update();
 	void DestroyGame();
 
-	virtual int GetMinPlayers();
-	virtual int GetMaxPlayers();
+	virtual size_t GetMinPlayers();
+	virtual size_t GetMaxPlayers();
 	virtual void Run();
 
 private:

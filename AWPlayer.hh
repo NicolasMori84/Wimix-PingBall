@@ -6,7 +6,7 @@ class AWPlayer
 public:
 	enum ControllerType
 	{
-		BUTTON,
+		SIMPLEBUTTON,
 		JOYSTICK,
 		DIRECTIONNALBUTTON,
 		GYROSCOPE

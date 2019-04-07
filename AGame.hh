@@ -25,9 +25,9 @@ public:
 
 	virtual void Run() = 0;
 
-	virtual int GetMinPlayers() = 0;
+	virtual size_t GetMinPlayers() = 0;
 
-	virtual int GetMaxPlayers() = 0;
+	virtual size_t GetMaxPlayers() = 0;
 };
 
 extern "C"
