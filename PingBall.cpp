@@ -227,12 +227,15 @@ void PingBall::InitPlayers()
 	/*players.push_back(players.size() + 1);//bot
 	players.push_back(players.size() + 1);//bot
 	players.push_back(players.size() + 1);//bot*/
+	std::cout << "Nbr_joueur Init : " << wPlayers.size() << std::endl;
 	for (int i = 0; i < wPlayers.size(); i++)
 	{
+		std::cout << "Player : " << i << std::endl;
 		newPlayer = new Player();
 		newPlayer->Wplayer = wPlayers[i];
 		newPlayer->Wplayer->SetController(AWPlayer::ControllerLocation::LEFT, AWPlayer::ControllerType::JOYSTICK);
 		newPlayer->Wplayer->SetController(AWPlayer::ControllerLocation::RIGHT, AWPlayer::ControllerType::SIMPLEBUTTON);
+		std::cout << "Set controller" << std::endl;
 		newPlayer->id = i;
 		newPlayer->position.x = initialPosition[i].x;
 		newPlayer->position.y = initialPosition[i].y;
